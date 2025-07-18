@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GadgetPro - SmartWatch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="topic">GadgetPro SmartWatch</h1>
+      <div class="header">
+        <div id="clock" class="clock">Loading time...</div>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#tabs">More Info</a>
+          <a href="#buy">Buy Now</a>
+          <button id="modeToggle">🌙 Dark Mode</button>
+        </nav>
+      </div>
+    </header>
+
+    <section id="features" class="feature1">
+      <h2 class="alignCenter">Features</h2>
+      <input
+        type="text"
+        id="searchBox"
+        class="searchInput"
+        placeholder="Search features..."
+      />
+
+      <div class="sortButtons">
+        <button id="sortAsc">Sort A-Z</button>
+        <button id="sortDesc">Sort Z-A</button>
+      </div>
+
+      <ul id="featureList" class="featureList">
+        <li>Heart Rate Monitor</li>
+        <li>Sleep Tracking</li>
+        <li>Water Resistant</li>
+        <li>Bluetooth Connectivity</li>
+        <li>Step Counter</li>
+        <li>GPS Navigation</li>
+      </ul>
+    </section>
+
+    <section id="gallery" class="feature1">
+      <h2>Image Gallery</h2>
+      <div class="slider">
+        <img src="images/slide1.jpg" id="slide" alt="Smartwatch Image" />
+        <button onclick="prev()">⟨</button>
+        <button onclick="next()">⟩</button>
+      </div>
+    </section>
+
+    <section id="tabs" class="feature">
+      <h2>More Information</h2>
+      <div class="tabs">
+        <button class="tabBtn" onclick="showTab('tab1')">Specifications</button>
+        <button class="tabBtn" onclick="showTab('tab2')">Warranty</button>
+        <button class="tabBtn" onclick="showTab('tab3')">FAQ</button>
+      </div>
+      <div id="tab1" class="tabContent">
+        This smartwatch has 1.5-inch AMOLED display, 7-day battery life.
+      </div>
+      <div id="tab2" class="tabContent hidden">
+        Warranty: 1 year from date of purchase.
+      </div>
+      <div id="tab3" class="tabContent hidden">
+        FAQs: Contact anujgaude@gmail.com for more info.
+      </div>
+    </section>
+
+    <section id="buy" class="feature1">
+      <h2>Buy Now</h2>
+      <form id="orderForm">
+        <div class="form-row">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="form-row">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="form-row">
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+        <div class="form-row">
+          <label for="qty">Quantity:</label>
+          <input type="number" id="qty" value="1" min="1" />
+        </div>
+        <div class="form-row">
+          <label for="color">Color:</label>
+          <select id="color">
+            <option value="black">Black</option>
+            <option value="silver">Silver</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
+      </form>
+      <p>
+        <b>Total Price: ₹<span id="totalPrice">4999</span></b>
+      </p>
+      <button type="submit" class="button">Place Order</button>
+    </section>
+
+    <section id="review" class="feature1">
+      <h2>User Reviews</h2>
+      <textarea
+        id="reviewText"
+        placeholder="Write your review here..."
+      ></textarea
+      ><br />
+      <button class="button" onclick="addReview()">Submit Review</button>
+      <div id="reviewList"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 GadgetPro. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
